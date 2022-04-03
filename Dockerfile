@@ -21,8 +21,9 @@ ENV DATABASE_NAM music
 ENV MYSQL_USER_NAME music
 ENV MYSQL_PASSWORD Music2022
 #安装依赖包
-RUN apk add --update --no-cache openjdk8-jre-base \ && rm -f /var/cache/apk/*
-
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tencent.com/g' /etc/apk/repositories \
+    && apk add --update --no-cache openjdk8-jre-base \
+    && rm -f /var/cache/apk/*
 #指定运行时的工作目录
 WORKDIR /app
 
