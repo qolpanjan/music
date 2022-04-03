@@ -11,7 +11,7 @@ COPY src /app/src
 COPY pom.xml /app
 
 #执行代码编译命令
-RUN mvn -f /app/pom.xml clean packge
+RUN mvn -f /app/pom.xml clean package
 
 # 选择运行时基础镜像
 FROM alpine:3.13

@@ -1,6 +1,16 @@
 {
   "containerPort": 80,
   "minNum": 0,
-  "maxNum": 50
+  "maxNum": 50,
+  "cpu": 1,
+  "mem": 1,
+  "policyType": "cpu",
+  "policyThreshold": 60,
+  "envParams": {},
+  "customLogs": "stdout",
+  "dataBaseName": "music",
+  "execcuteSQLs": [
+    "CREATE DATABASE IF NOT EXISTS music;"
+  ]
 
 }
