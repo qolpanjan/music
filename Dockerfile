@@ -17,7 +17,7 @@ RUN mvn -f /app/pom.xml clean package
 FROM alpine:3.13
 
 ENV MYSQL_HOST 10.0.224.15
-ENV DATABASE_NAM music
+ENV DATABASE_NAME music
 ENV MYSQL_USER_NAME music
 ENV MYSQL_PASSWORD Music2022
 #安装依赖包
